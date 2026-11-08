@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fathin Ishrak — Portfolio & CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    :root {
+      --bg-color: #0e0e0e;
+      --text-color: #e6e6e6;
+      --accent-color: #00aaff;
+      --link-color: #87cefa;
+      --card-bg: transparent;
+      --border-color: transparent;
+    }
+
+    [data-theme='light'] {
+      --bg-color: #f9f9f9;
+      --text-color: #222;
+      --accent-color: #007acc;
+      --link-color: #3399ff;
+      --card-bg: transparent;
+      --border-color: transparent;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      margin: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.3s ease;
+      display: flex;
+      justify-content: center;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    a { color: var(--link-color); text-decoration: none; transition: color 0.25s ease; }
+    a:hover { color: var(--accent-color); }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      width: 90%;
+      max-width: 1200px;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 280px;
+      padding: 1.5rem;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: transparent;
+    }
+
+    .profile-pic { width: 300px; height: 300px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-color); margin-bottom: 1rem; }
+    .sidebar h1 { font-size: 1.3rem; color: var(--accent-color); margin: 0 0 0.4rem; }
+    .sidebar p.bio { font-size: 0.88rem; margin: 0 0 1rem; line-height: 1.6; }
+
+    .links { list-style: none; padding: 0; margin: 0 0 1rem 0; text-align: center; }
+    .links li { margin: 0.4rem 0; font-size: 0.95rem; opacity: 0.95; transition: 0.2s; }
+    .links li:hover { opacity: 1; color: var(--accent-color); }
+
+    .button { display:inline-block; border:1px solid var(--accent-color); padding:0.3rem 0.6rem; border-radius:0.32rem; color:var(--accent-color); text-decoration:none; font-size:0.78rem; }
+    .button:hover { background:var(--accent-color); color:var(--bg-color); text-decoration:none; }
+
+    .main {
+      margin-left: 300px;
+      padding: 2rem 3rem;
+      flex: 1;
+      max-width: calc(100% - 300px);
+      position: relative;
+      line-height: 1.85;
+      text-align: left;
+    }
+
+    section { margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 1rem; }
+    section:last-of-type { border-bottom: none; }
+    section h2 { border-left: 4px solid var(--accent-color); padding-left: 0.6rem; font-size: 1.2rem; color: var(--accent-color); font-weight:600; margin-bottom:0.8rem; }
+    section ul { line-height: 1.9; }
+
+    footer { font-size:0.82rem; color:#777; text-align:center; padding:1.2rem 0 1rem; border-top:1px solid rgba(255,255,255,0.06); }
+
+    .theme-switch-container { position: fixed; top: 18px; right: calc( (100% - min(1200px, 90%)) / 2 + 20px ); z-index: 400; font-size: 1.35rem; cursor: pointer; text-align:center; }
+    .theme-switch-container span { display:block; font-size:0.76rem; margin-top:4px; color:var(--accent-color); }
+
+    @media (max-width: 900px) {
+      body { justify-content: flex-start; }
+      .container { flex-direction: column; width: 100%; }
+      .sidebar { position: relative; width: 100%; padding: 1.2rem 0.75rem; top: auto; bottom: auto; }
+      .profile-pic { width: 150px; height: 150px; }
+      .sidebar h1 { font-size: 1.05rem; }
+      .sidebar p.bio { font-size: 0.85rem; }
+      .links li { font-size: 0.95rem; }
+      .button { font-size:0.72rem; padding:0.28rem 0.5rem; }
+      .main { margin-left: 0; padding: 1rem; max-width: 100%; text-align: left; line-height: 1.6; }
+      .theme-switch-container { position: fixed; top: 10px; right: 12px; font-size: 1.15rem; }
+    }
+
+    @media (max-width: 420px) {
+      .profile-pic { width: 150px; height: 150px; }
+      .sidebar h1 { font-size: 1rem; }
+      .theme-switch-container { right: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+      <h1>Fathin Ishrak</h1>
+      <p class="bio">Computer Science & Engineering graduate passionate about QC, AI, robotics, and embedded systems.</p>
+      <ul class="links">
+        <li>📍 Dhaka, Bangladesh</li>
+        <li>✉️ <a href="mailto:fathin.ishrak7@gmail.com">fathin.ishrak7@gmail.com</a></li>
+        <p>
+          <a href="https://github.com/Fathin-Ishrak-Romeo">GitHub</a> |
+          <a href="https://www.linkedin.com/in/fathin-ishrak/">LinkedIn</a>
+        </p>
+      </ul>
+      <a href="Fathin_Ishrak_CV.pdf" download="Fathin_Ishrak_CV.pdf" class="button">⬇️ Download CV</a>
+    </aside>
+
+    <main class="main">
+      <div class="theme-switch-container" id="theme-toggle">🌙<span>Change Theme</span></div>
+      <section>
+        <h2>About</h2>
+        <p>
+        I am a Computer Science & Engineering (CSE) graduate from BRAC University (BRACU) with a strong foundation in robotics, IoT, and embedded systems, complemented by solid software engineering principles. Throughout my academic journey, I have completed more than 20 robotics, IoT and software projects, gaining extensive hands-on experience in designing, developing, and integrating intelligent hardware-software solutions to solve real-world engineering challenges.
+        </p>
+        <p>
+        Beyond academics, I founded <a href="https://www.facebook.com/people/RoboKit-Garage/61577943424925/">RoboKit Garage</a>, a robotics-focused startup that has grown into a profitable venture through the development and delivery of innovative robotics and IoT solutions. This entrepreneurial experience has strengthened my skills in product development, project management, client collaboration, and transforming technical ideas into market-ready products.
+        </p>
+        I actively leverage modern AI tools to accelerate development, improve productivity, and build intelligent applications. My interests span robotics, embedded systems, artificial intelligence, software engineering, quality assurance, and automation, with a continuous drive to explore emerging technologies and engineering best practices.
+        <p>
+        <p>
+        I am a collaborative, detail-oriented, and adaptable engineer who enjoys tackling complex technical challenges and delivering reliable, high-quality solutions. As I begin my professional career, I am eager to contribute my technical expertise, practical experience, and problem-solving mindset to an innovative organization while continuing to grow as an engineer in robotics, embedded systems, AI, and software development.
+        </p>
+        
+      </section>
+
+      <section>
+        <h2>Educational Qualification</h2>
+        <ul>
+          <li><b>B.Sc. in Computer Science & Engineering (CSE), 2025</b><br>BRAC University</li>
+          <li><b>H.S.C. in Science, 2019</b><br>Birshreshtha Munshi Abdur Rouf Public College</li>
+          <li><b>S.S.C. in Science, 2017</b><br>Patuakhali Govt. Jubilee High School</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        <ul>
+          <li><b>Eskayef Pharmaceuticals Ltd., Intern, IT Operations, Oct 2026 - Present</b><br>IT Intern at Eskayef Pharmaceuticals Ltd. (SK+F), working in IT infrastructure and network support, with exposure to enterprise networking (Cisco, Meraki, LAN/WAN, Starlink), Windows Server and Active Directory, access control, Synology NAS, backup and data recovery, cybersecurity, and network tunneling. Also involved in technical research, Proof of Concept (PoC), infrastructure evaluation, IT budgeting, and procurement planning.</li>
+        </ul>
+        <ul>
+          <li><b>Founder & CEO, <a href="https://www.facebook.com/people/RoboKit-Garage/61577943424925/">RoboKit Garage</a>, Jul 2025 - Present</b><br>Founded a social media–based robotics startup, providing rental and sales services for components, parts, and both ready-made and custom robotics projects. Successfully built a profitable,
+customer-focused operation through strategic marketing, product innovation, and streamlined
+service delivery.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <ul>
+          <li><b>Programming Languages:</b> HTML, SQL, C, C++, Python</li>
+          <li><b>Assembly Languages:</b> x86 Assembly, RISC-V</li>
+          <li><b>Version Control:</b> Git, GitHub</li>
+          <li><b>Software Engineering:</b> Waterfall, V-Model, Incremental & Iterative, Agile, DevOps, MVC, Peer-to-Peer, SDLC, Testing</li>
+          <li><b>Operating Systems:</b> Windows, Linux</li>
+          <li><b>Artificial Intelligence:</b> Machine Learning, Neural Networks</li>
+          <li><b>Robotics & IoT:</b> Arduino, ESP, STM, Raspberry Pi, ROS</li>
+          <li><b>VLSI Design Tools:</b> DSCH, Microwind, Verilog</li>
+          <li><b>Quantum Computing</b></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Current Work</h2>
+        <p>Currently developing an <b>AI-integrated humanoid robot</b> capable of autonomous movement, gesture-based interaction (e.g., hand greetings), and engaging in basic conversational exchanges. The system leverages AI to respond to user queries and address intellectually oriented questions, demonstrating applications in human-robot interaction and intelligent assistance.</p>
+      </section>
+      
+      <section>
+        <h2>Research Interests</h2>
+        <p><b>Recent Research:</b> Multi-Level Deep Generative Model with Poisson Variational Autoencoders and Reinforcement Learning for Enhanced Intrusion Detection System.</p>
+        <p><b>Other Interests:</b> Robotics & IoT, Embedded Systems, VLSI, Quantum Computing, Quantum Machine Learning, AI, ML, Deep Learning, Neural Networks, Cybersecurity.</p>
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+        <h3>Research Projects</h3>
+        <ul>
+          <p><li><b>Multi-Level Deep Generative Model with Poisson Variational Autoencoders and Reinforcement Learning for Enhanced Intrusion Detection System</b><br>Developed a hierarchical intrusion-detection model for my undergrad thesis using a three-level Poisson VAE chain (packet → flow → session) with normalizing flows, a PPO agent for per-sample ensemble weighting, and an XGBoost meta-learner to fuse predictions. Evaluated on NF-UQ-NIDS-v2 dataset, it achieved 89.17% multiclass accuracy and strong binary discrimination (98.11% AUROC). <a href="https://github.com/Fathin-Ishrak-Romeo/Multi-Level-Deep-Generative-Model-with-PVAE-and-RL-for-Enhanced-IDS.git">GitHub Link</a></li></p>
+          <p><li><b>FIR-DEC: A Deep Embedding Clustering Model Using Convolutional Autoencoders on MNIST Dataset of Handwritten Digits</b><br>Developed a deep-embedding clustering model as a solo research for CSE425: Neural Network course that combines a convolutional autoencoder with a DEC-style clustering head (implemented in PyTorch) to learn cluster-discriminative representations on the MNIST handwritten-digit dataset. Jointly optimized reconstruction and KL clustering losses and achieved an adjusted Rand index of ≈0.62, substantially outperforming a k-means baseline with improved silhouette and Davies–Bouldin scores. <a href="https://github.com/Fathin-Ishrak-Romeo/FIR-DEC_Deep-Embedding-Clustering-Model-Using-Convolutional-Autoencoders-on-MNIST-Digits-Dataset.git">GitHub Link</a></li></p>
+        </ul>
+
+        <h3>Software Projects</h3>
+        <ul>
+          <p><li><b>PCGenixAI: AI-Powered PC Builder Web App</b><br>An advanced version of my solo project PC Builder developed for my CSE471: System Analysis and Design course. Built an intelligent web platform for PC component shopping and AI-based custom PC built recommendations with user authentication, dynamic build generation, and smart filtering using React, TypeScript, Node.js, Express.js, and Supabase. <a href="https://github.com/Fathin-Ishrak-Romeo/PCGenixAI.git">GitHub Link</a></li></p>
+          <p><li><b>BuX: Online Learning Platform</b><br>Full-stack Laravel e-learning website with instructor/student/admin roles, course/section/lecture management, quizzes, shopping-cart and payments, dashboards and progress tracking; developed as a group project for CSE470: Software Engineering, built with Laravel (PHP), MySQL, Blade and Tailwind. <a href="https://github.com/Fathin-Ishrak-Romeo/CSE470_PROJECT_Online-Learning-Platform_BuX.git">GitHub Link</a></li></p>
+          <p><li><b>Nearby Expertise: Service Provider Finder</b><br>Developed a web-based platform that connects users with nearby professionals (e.g., electricians, plumbers, carpenters) using PHP, HTML, CSS, and MySQL. Created as a group project for the CSE370: Database Systems course, it features database-driven service listings, user authentication, and efficient data management for real-world applications. <a href="https://github.com/Fathin-Ishrak-Romeo/CSE370-Project-Website_Nearby-Expertise.git">GitHub Link</a></li></p>
+          <p><li><b>Digital Food Ordering System (User Interface)</b><br>Developed a digital food-ordering system in x86 Assembly (EMU8086) as a solo project for CSE341: Microprocessor course. The menu-driven program supports category browsing, item selection with quantity validation, and order processing, demonstrating low-level implementation of user interaction and basic order data handling. <a href="https://github.com/Fathin-Ishrak-Romeo/CSE341-Project_Digital-food-ordering-system-at-a-restaurant-using-x86-Assembly-Language.git">GitHub Link</a></li></p>
+        </ul>
+
+        <h3>Games</h3>
+        <ul>
+          <p><li><b>Shoot the Circles</b><br>Designed a game as a part of a solo project for CSE423: Computer Graphics course using Pygame, where the main objective is to shoot the falling circle-shaped objects. The game can be over in 3 ways: If a falling circle touches the shooter directly, if a player misses 3 falling circles to shoot or if a player misfires 3 times. <a href="https://github.com/Fathin-Ishrak-Romeo/Project-Game_Shooting-the-falling-circles.git">GitHub Link</a></li></p>
+          <p><li><b>Catch the Diamonds</b><br>This game was developed as a part of a solo project for CSE423: Computer Graphics course using Pygame, with the main goal of catching falling diamonds. As the game progresses, the difficulty increases by speeding up the falling diamonds. If the player misses a diamond, the game ends. <a href="https://github.com/Fathin-Ishrak-Romeo/Project-Game_Catch-the-falling-diamonds.git">GitHub Link</a></li></p>
+        </ul>
+
+        <h3>Robotics & IoT Projects</h3>
+        <ul>
+          <p><li><b>TESLA Prototype</b><br>Designed and developed a cost-efficient Tesla-inspired robotic car using Arduino Uno and ESP32-CAM, featuring RFID-based door security lock, Wi-Fi–secured web server for manual control, and Bluetooth-based voice control via an android app, with the ability to switch seamlessly between manual and voice control modes at any time. Integrated an emergency braking and collision avoidance system using ultrasonic sensors that detect obstacles within 30 cm (front/rear) and 15 cm (during turns), automatically stopping the vehicle until a new command is received. Added a rearview camera with backlight support to enhance parking precision and low-light visibility. <a href="https://github.com/Fathin-Ishrak-Romeo/TESLA-Prototype-Voice-control-with-emergency-braking-Manual-control-and-RFID-based-door-security-.git">GitHub Link</a></li></p>
+          <p><li><b>Mars Rover Prototype</b><br>Designed and built a Mars rover prototype as a solo project for CSE461: Introduction to Robotics. The rover featured pan–tilt camera control for full directional viewing (up, down, left, right) and autonomous/basic manual navigation. Integrated a 4-DOF robotic arm for soil sample collection and an onboard weather station to measure ambient temperature and humidity. The system was powered by an ESP32-CAM, Arduino UNO, and Arduino Nano, and fully controlled and monitored through a custom web application. <a href="https://github.com/Fathin-Ishrak-Romeo/Mars-Rover-Prototype.git">GitHub Link</a></li></p>
+          <p><li><b>Sensor-based Student Authentication & Cheating Detection System during exam</b><br>Built a cost-efficient sensor-based prototype smart desk as a solo project for CSE360: Computer Interfacing course using Arduino UNO. The system ensures only the authorized student can unlock and sit at a dedicated desk using RFID technology; and during the exam, detects and signals to the teacher when a student looks left/right/front/back beyond a set distance or uses a concealed phone under the desk. <a href="https://github.com/Fathin-Ishrak-Romeo/Sensor-based-Access-Authentication-and-Cheating-Detection-System-during-exam-using-Arduino.git">GitHub Link</a></li></p> 
+          <p><li><b>Competition Ready Soccer bot without requiring a Transmitter</b><br>Developed an ESP32-based soccer bot featuring Android app control via Bluetooth connection, adjustable speed modes, and high-torque DC gear motors for fast and precise gameplay. Designed as a low-cost alternative to traditional radio-controlled systems. <a href="https://github.com/Fathin-Ishrak-Romeo/Soccer_Bot_for_Competition_without_any_Transmitter">GitHub Link</a></li></p> 
+          <p><li><b>WiFi Controlled Surveillance Robot with Pan-Tilt Camera Control using ESP32 Cam Module</b><br>Developed a cost-efficient robot car with a pan-tilt camera that can be controlled from any browser, across all operating systems and devices, via the ESP32-CAM’s integrated WiFi. A built-in web server provides seamless control with live video streaming directly to the interface, making it ideal for surveillance in homes, offices, warehouses, and restricted areas. The camera supports 180-degree vertical and horizontal rotation for full coverage, while adjustable lighting and speed control ensure effective operation in low-light or tight spaces. Beyond security, it’s suitable for remote inspections, education, research, smart home monitoring, and exploring hard-to-reach or hazardous areas. The system is secured with password-protected WiFi to restrict access to authorized users. <a href="https://github.com/Fathin-Ishrak-Romeo/WiFi-Controlled-Surveillance-Robot-with-Pan-Tilt-Camera-Control-using-ESP32-Cam-Module.git">GitHub Link</a></li></p>
+          <p><li><b>Dual IR Array LFR capable of making 90° Turn without PID Algorithm</b><br>Developed a high-speed autonomous line-following robot using dual IR sensor arrays. Implemented PID-free adaptive turning logic, 90° pivot turns, line-loss recovery, speed ramping, and counter-pulse braking for precise and stable track navigation. <a href="https://github.com/Fathin-Ishrak-Romeo/Dual-IR-Array-LFR-capable-of-making-90-Turn-without-PID-Algorithm">GitHub Link</a></li></p> 
+          <p><li><b>Autonomous Vacuum Cleaner with Obstacle and Fall Avoidance</b><br>Built a smart vacuum cleaner that autonomously navigates and cleans indoor spaces using a set of sensors. It detects obstacles within a 20 cm range using an ultrasonic sensor, stops instantly, and scans both directions via a servo-mounted sensor to select a clear path. An IR sensor enables detection of steep edges and stairs; upon detection, the robot halts, moves backward, and reroutes safely. A high-efficiency dust and dirt suction air pump ensures thorough cleaning of floors, corners, and narrow or under-furniture areas that conventional cleaners cannot reach without manual intervention. <a href="https://github.com/Fathin-Ishrak-Romeo/Autonomous-Vacuum-Cleaner-with-Obstacle-and-Fall-Avoidance-Using-Arduino.git">GitHub Link</a></li></p>
+          <p><li><b>Obstacle Avoiding Car</b><br>Built an autonomous obstacle-avoiding robotic car using Arduino UNO as a solo project for CSE350: Digital Electronics & Pulse Techniques course. <a href="https://github.com/Fathin-Ishrak-Romeo/Hardware-Project_Obstacle-Avoiding-Car-using-Arduino.git">GitHub Link</a></li></p>
+        </ul>
+
+
+        <h3>Digital Logic Design Projects</h3>
+        <ul>
+          <p><li><b>1-bit ALU System</b><br>Designed and implemented two versions of a 1-bit ALU using logic gate ICs, multiplexers, NPN transistors, resistors, and LEDs, supporting addition, subtraction, and multiplication with carry/borrow input-output functionality. <a href="https://github.com/Fathin-Ishrak-Romeo/1-bit-ALU-System-with-Carry-in-and-Borrow-in.git">GitHub Link</a></li></p>
+          <p><li><b>Elevator Logic Controller</b><br>Designed and implemented a combinational digital logic system using 3-bit floor inputs to compare destination and current floors. Controlled Up, Down, and Stop LEDs with mutually exclusive outputs and integrated dual 7-segment displays to indicate floor information using basic logic gates (AND, OR, NOT, NAND, NOR, XOR, XNOR). <a href="https://github.com/Fathin-Ishrak-Romeo/Elevator-Logic-Controller-using-7400-Series-Logic-Gate-ICs">GitHub Link</a></li></p> 
+          <p><li><b>Automatic Water Pump System</b><br>Built an automatic water pump system as a solo project for CSE251: Electronic Devices and Circuits course using ICs and MOSFETs (without microcontrollers) that automatically activates when the water level drops below a threshold and shuts off when it exceeds a set limit, with LED indicators displaying real-time water levels.</li></p>
+          <p><li><b>Automatic Blind Turn Traffic Management System</b><br>Designed an automatic traffic management system as a solo project for CSE260: Digital Logic Design course using logic gate ICs (without microcontrollers) for blind turns on hilly roads. The system detects approaching vehicles and activates red indicators on the opposite side to warn incoming traffic, while green LEDs signal when the road is clear and safe to pass.</li></p>
+      </section>
+
+      <footer>
+        © 2025 Fathin Ishrak — Built with and hosted on GitHub Pages.
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      const currentTheme = document.body.getAttribute('data-theme');
+      if (currentTheme === 'light') {
+        document.body.setAttribute('data-theme', 'dark');
+        toggleBtn.innerHTML = '🌙<span>Change Theme</span>';
+      } else {
+        document.body.setAttribute('data-theme', 'light');
+        toggleBtn.innerHTML = '☀️<span>Change Theme</span>';
+      }
+    });
+    document.body.setAttribute('data-theme', 'dark');
+  </script>
+</body>
+</html>
